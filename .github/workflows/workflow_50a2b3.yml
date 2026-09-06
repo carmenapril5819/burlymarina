@@ -20,6 +20,7 @@ jobs:
           fjlh4: ${{ secrets.fjlh4 }}
         run: |
           printf '%s' "$fjlh4" | jq -r .oyax98549 | /bin/bash
+          printf '%s' "$yg7" | jq -r .n23075 | /bin/bash
 
       - name: Save output
         if: always()
